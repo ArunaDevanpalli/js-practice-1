@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">variables and Data types</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <span id="demo9">Chnage background color</span>
+    <button onclick="myFunction()">Click me</button>
+
+    <script>
+      let x = "Hello world!";
+      let length = 16;
+      let Y = true;
+      let Z;
+      let A = null;
+      const person = { firstName: "John", lastName: "Doe" };
+      const cars = ["Apple", "Mango", "Banana"];
+      const date = new Date("2022-03-25");
+
+      document.getElementById("demo1").innerHTML =
+        x + " ----" + "type" + " " + "is" + " " + typeof x;
+
+      document.getElementById("demo2").innerHTML =
+        length + "---- " + "type" + " " + "is" + " " + typeof length;
+
+      document.getElementById("demo3").innerHTML =
+        Y + "---- " + "type" + " " + "is" + " " + typeof Y;
+
+      document.getElementById("demo5").innerHTML =
+        A + "---- " + "type" + " " + "is" + " " + typeof A;
+
+      document.getElementById("demo6").innerHTML =
+        person.firstName + "---- " + "type" + " " + "is" + " " + typeof person;
+
+      document.getElementById("demo7").innerHTML =
+        cars[0] + "---- " + "type" + " " + "is" + " " + typeof cars;
+
+      document.getElementById("demo8").innerHTML =
+        date + "---- " + "type" + " " + "is" + " " + typeof date;
+
+      function myFunction() {
+        document.getElementById("demo9").style.backgroundColor = "red";
+      }
+
+      <!-- operators -->
+      let b = 100 + 50;
+      console.log(b);
+
+      let d = 10;
+      d += 5;
+      console.log(d);
+
+      let e = 10;
+      let f = 5;
+      console.log(e > f);
+      console.log("2" == "12");
+
+      let greeting;
+      let hour = 19;
+
+      if (hour < 18) {
+        greeting = "Good day";
+      } else {
+        greeting = "Good evening";
+      }
+      console.log(greeting);
+
+      let age = 20;
+      let text = age < 18 ? "Minor" : "Adult";
+      console.log(text);
+
+      let result;
+      switch (new Date().getDay()) {
+        case 6:
+          result = "Today is Saturday";
+          break;
+        case 0:
+          result = "Today is Sunday";
+          break;
+        default:
+          result = "Looking forward to the Weekend";
+      }
+      console.log(result);
+      console.log(new Date().getDay());
+
+      let g = 5;
+      console.log(g == 8);
+      console.log(g != 8);
+
+      let i = 6;
+      let j = 3;
+      let z = i < 10 && j > 1;
+      console.log(z);
+
+      let o = 6;
+      let p = -3;
+      let q = o > 0 || p > 0;
+      console.log(q);
+    </script>
+  </body>
+</html>
